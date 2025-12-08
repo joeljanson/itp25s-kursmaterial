@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors - Grundläggande till Avancerat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>CSS Selectors - En Guide</h1>
+    <p class="intro">Denna sida demonstrerar olika typer av CSS-selektorer, från grundläggande till lite mer avancerade.</p>
+    <h2>Länkar för vidare läsning</h2>
+    <ul>
+        <li><a href="https://css-tricks.com/css-selectors/">CSS-Tricks - CSS Selectors</a></li>
+    </ul>
+    <!-- SEKTION 1: GRUNDLÄGGANDE SELEKTORER -->
+    <section class="section">
+        <h2>1. Grundläggande Selektorer</h2>
+        <p class="section-intro">Det finns tre huvudtyper av grundläggande selektorer i CSS.</p>
+
+        <!-- Element-selektor -->
+        <div class="example-box">
+            <h3>Element-selektor</h3>
+            <p>Element-selektorn används för att styla alla element av en viss typ. I CSS skriver du bara elementnamnet.</p>
+            <p><strong>Exempel:</strong> Alla <code>&lt;p&gt;</code>-element på denna sida har fått en blå färg via element-selektorn.</p>
+            <p>Detta är ett vanligt paragraf-element som påverkas av element-selektorn.</p>
+            <p>Alla paragraf-element får samma styling automatiskt.</p>
+        </div>
+
+        <!-- ID-selektor -->
+        <div class="example-box">
+            <h3>ID-selektor</h3>
+            <p>ID-selektorn används för att styla ett specifikt element med ett unikt ID. I HTML använder du <code>id="mitt-id"</code> och i CSS skriver du <code>#mitt-id</code>.</p>
+            <p id="special-paragraph"><strong>Exempel:</strong> Detta paragraf-element har <code>id="special-paragraph"</code> och får därför en unik orange bakgrundsfärg.</p>
+            <p><strong>Viktigt:</strong> Ett ID ska bara användas en gång per sida - det är unikt! Varför? Det kommer vi prata mer om när vi pratar om JavaScript.</p>
+        </div>
+
+        <!-- Class-selektor -->
+        <div class="example-box">
+            <h3>Class-selektor</h3>
+            <p>Class-selektorn används för att styla flera element som delar samma klass. I HTML använder du <code>class="min-klass"</code> och i CSS skriver du <code>.min-klass</code>.</p>
+            <p class="highlighted"><strong>Exempel:</strong> Detta paragraf har klassen <code>highlighted</code>.</p>
+            <p class="highlighted">Detta är ett annat paragraf-element med samma klass <code>highlighted</code>.</p>
+            <p class="highlighted">Flera element kan ha samma klass och får då samma styling.</p>
+            <p><strong>Fördel:</strong> Du kan återanvända samma styling på flera element!</p>
+        </div>
+    </section>
+
+    <!-- SEKTION 2: CSS SPECIFITET -->
+    <section class="section">
+        <h2>2. CSS Specifitet</h2>
+        <p class="section-intro">När flera CSS-regler kan gälla för samma element, vinner den mest specifika regeln. Ordningen är: Element &lt; Class &lt; ID</p>
+
+        <div class="example-box">
+            <h3>Exempel på Specifitet</h3>
+            <p>Detta paragraf-elementet har ingen klass eller ID, så det påverkas bara av element-selektorn.</p>
+            <p class="spec-example">Detta paragraf-elementet har klassen <code>spec-example</code> och får därför en grön bakgrund (class-selektor vinner över element-selektor).</p>
+            <p class="spec-example" id="spec-winner">Detta paragraf-elementet har både klassen <code>spec-example</code> OCH id:et <code>spec-winner</code>. ID-selektorn vinner eftersom den är mer specifik, så den får en lila bakgrund.</p>
+            <p><strong>Regel:</strong> ID (#) &gt; Class (.) &gt; Element (p, h1, etc.)</p>
+        </div>
+
+        <div class="example-box">
+            <h3>Kombinera Selektorer</h3>
+            <p>Du kan också kombinera selektorer för att bli mer specifik:</p>
+            <div class="box">
+                <p>Detta paragraf-elementet är INNE i en div med klassen <code>box</code>.</p>
+            </div>
+            <p>Detta paragraf-elementet är UTANFÖR div:en och påverkas inte av kombinationen.</p>
+            <p><strong>Förklaring:</strong> <code>.box p</code> betyder "alla p-element som är inne i ett element med klassen box".</p>
+        </div>
+    </section>
+
+    <!-- SEKTION 3: AVANCERADE SELEKTORER -->
+    <section class="section">
+        <h2>3. Avancerade Selektorer</h2>
+        <p class="section-intro">Pseudo-klasser låter dig styla element baserat på deras tillstånd eller position.</p>
+
+        <div class="example-box">
+            <h3>:hover - Muspekaren över elementet</h3>
+            <p>När du håller muspekaren över ett element kan det ändra utseende.</p>
+            <p class="hover-demo">Håll muspekaren över denna text för att se effekten! (Den blir större och får en bakgrundsfärg)</p>
+            <a href="#" class="hover-link">Håll muspekaren över denna länk</a>
+        </div>
+
+        <div class="example-box">
+            <h3>:first-child och :last-child</h3>
+            <p>Dessa selektorer väljer första respektive sista barnet i en container.</p>
+            <ul class="child-demo">
+                <li>Detta är första listelementet (får speciell styling)</li>
+                <li>Detta är ett vanligt listelement</li>
+                <li>Detta är ett vanligt listelement</li>
+                <li>Detta är sista listelementet (får också speciell styling)</li>
+            </ul>
+        </div>
+
+        <div class="example-box">
+            <h3>:nth-child() - Välj specifikt barn</h3>
+            <p>Med :nth-child() kan du välja ett specifikt element baserat på dess position.</p>
+            <ul class="nth-demo">
+                <li>Element 1</li>
+                <li>Element 2 (detta är det andra elementet - får speciell färg)</li>
+                <li>Element 3</li>
+                <li>Element 4</li>
+                <li>Element 5</li>
+            </ul>
+            <p><strong>Tips:</strong> <code>:nth-child(2)</code> väljer det andra elementet. Du kan också använda <code>even</code> (jämna) eller <code>odd</code> (udda).</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Experimentera med CSS-selektorer för att förstå hur de fungerar!</p>
+    </footer>
+
+</body>
+</html>

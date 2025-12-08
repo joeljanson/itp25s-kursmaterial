@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Tre olika sätt att använda CSS</title>
+    
+    <!-- SÄTT 3: EXTERN CSS - Importerar en extern CSS-fil -->
+    <!-- Detta är det bästa och rekommenderade sättet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- SÄTT 2: INTERN CSS - CSS direkt i HTML-filen med <style> tag -->
+    <!-- Används ibland för prototypning eller om man vill att allt ska bo i samma HTML-fil -->
+    <style>
+        .intern-css {
+            background-color: #e3f2fd;
+            padding: 20px;
+            border: 2px solid #1976d2;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tre olika sätt att använda CSS</h1>
+    
+    <!-- SÄTT 1: INLINE CSS - CSS direkt i HTML-elementet med style-attribut -->
+    <!-- Används sällan, men kan vara praktiskt för snabba tester -->
+    <div style="background-color: #fff3e0; padding: 20px; border: 2px solid #f57c00; border-radius: 8px; margin: 20px 0;">
+        <h2>1. Inline CSS</h2>
+        <p>Detta är styling direkt i HTML-elementet med <code>style</code>-attributet.</p>
+        <p><strong>Fördelar:</strong> Snabbt att testa, högst prioritet</p>
+        <p><strong>Nackdelar:</strong> Svårt att underhålla, kan inte återanvändas</p>
+    </div>
+    
+    <!-- SÄTT 2: INTERN CSS - Styling definierad i <style> tag i <head> -->
+    <div class="intern-css">
+        <h2>2. Intern CSS (med &lt;style&gt; tag)</h2>
+        <p>Detta är CSS som skrivs i en <code>&lt;style&gt;</code> tag i <code>&lt;head&gt;</code>.</p>
+        <p><strong>Fördelar:</strong> All CSS på samma ställe, enklare än inline</p>
+        <p><strong>Nackdelar:</strong> Kan bara användas på en sida, större HTML-filer</p>
+    </div>
+    
+    <!-- SÄTT 3: EXTERN CSS - Styling i en separat CSS-fil -->
+    <div class="extern-css">
+        <h2>3. Extern CSS (importerad fil)</h2>
+        <p>Detta är CSS som ligger i en separat fil (t.ex. <code>style.css</code>) och importeras med <code>&lt;link&gt;</code> i <code>&lt;head&gt;</code>.</p>
+        <p><strong>Fördelar:</strong> Återanvändbar på flera sidor, renare HTML, lättare att underhålla</p>
+        <p><strong>Nackdelar:</strong> Ytterligare HTTP-request (men minimal påverkan)</p>
+    </div>
+    
+</body>
+</html>

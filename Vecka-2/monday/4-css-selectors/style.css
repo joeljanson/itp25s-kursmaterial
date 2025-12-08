@@ -1,0 +1,254 @@
+/* ============================================
+   GRUNDLÄGGANDE STYLING FÖR SIDAN
+   ============================================ */
+
+/* Element-selektor: Stylar alla body-element */
+body {
+	font-family: Arial, sans-serif;
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 20px;
+	line-height: 1.6;
+	background-color: #f5f5f5;
+}
+
+/* Element-selektor: Stylar alla h1-element */
+h1 {
+	color: #333;
+	text-align: center;
+	border-bottom: 3px solid #4caf50;
+	padding-bottom: 10px;
+}
+
+/* Element-selektor: Stylar alla h2-element */
+h2 {
+	color: #555;
+	margin-top: 30px;
+	border-left: 4px solid #2196f3;
+	padding-left: 15px;
+}
+
+/* Element-selektor: Stylar alla h3-element */
+h3 {
+	color: #666;
+	margin-top: 20px;
+}
+
+/* Element-selektor: Stylar alla p-element (paragraf) */
+/* Detta är en grundläggande element-selektor - alla p-element får denna styling */
+p {
+	color: #2196f3; /* Blå färg för alla paragraf-element */
+	margin: 10px 0;
+}
+
+/* Element-selektor: Stylar alla code-element */
+code {
+	background-color: #f0f0f0;
+	padding: 2px 6px;
+	border-radius: 3px;
+	font-family: "Courier New", monospace;
+	color: #d63384;
+}
+
+/* ============================================
+   SEKTION 1: GRUNDLÄGGANDE SELEKTORER
+   ============================================ */
+
+/* Class-selektor: Stylar alla element med klassen "intro" */
+/* Syntax: .klassnamn (med punkt framför) */
+.intro {
+	text-align: center;
+	font-style: italic;
+	color: #666;
+	margin-bottom: 30px;
+}
+
+/* Class-selektor: Stylar alla element med klassen "section" */
+.section {
+	background-color: white;
+	padding: 25px;
+	margin: 20px 0;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Class-selektor: Stylar alla element med klassen "section-intro" */
+.section-intro {
+	color: #666;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+/* Class-selektor: Stylar alla element med klassen "example-box" */
+.example-box {
+	background-color: #f9f9f9;
+	border: 2px solid #ddd;
+	border-radius: 5px;
+	padding: 20px;
+	margin: 15px 0;
+}
+
+/* ID-selektor: Stylar elementet med id="special-paragraph" */
+/* Syntax: #id-namn (med hash-tecken framför) */
+/* Viktigt: Ett ID ska bara användas en gång per sida! */
+#special-paragraph {
+	background-color: #ff9800; /* Orange bakgrund */
+	color: white;
+	padding: 15px;
+	border-radius: 5px;
+	font-weight: bold;
+}
+
+/* Class-selektor: Stylar alla element med klassen "highlighted" */
+/* Flera element kan ha samma klass - de får alla samma styling */
+.highlighted {
+	background-color: #ffeb3b; /* Gul bakgrund */
+	padding: 10px;
+	border-left: 4px solid #fbc02d;
+	margin: 8px 0;
+}
+
+/* ============================================
+   SEKTION 2: CSS SPECIFITET
+   ============================================ */
+
+/* Class-selektor: Stylar element med klassen "spec-example" */
+/* Denna regel har högre specifitet än element-selektorn p */
+.spec-example {
+	background-color: #4caf50; /* Grön bakgrund */
+	color: white;
+	padding: 12px;
+	border-radius: 5px;
+}
+
+/* ID-selektor: Stylar elementet med id="spec-winner" */
+/* ID-selektorn har HÖGST specifitet och vinner över class-selektorn */
+/* Även om elementet har både klassen "spec-example" OCH id:et "spec-winner" */
+/* så vinner ID-selektorn eftersom den är mer specifik */
+#spec-winner {
+	background-color: #9c27b0; /* Lila bakgrund */
+	color: white;
+	padding: 12px;
+	border-radius: 5px;
+	font-weight: bold;
+}
+
+/* Kombinerad selektor: Stylar p-element som är INNE i element med klassen "box" */
+/* Syntax: .box p betyder "alla p-element som är barn till .box" */
+/* Detta är mer specifikt än bara p eller bara .box */
+.box {
+	background-color: #e3f2fd;
+	padding: 15px;
+	border-radius: 5px;
+	margin: 10px 0;
+}
+
+.box p {
+	color: #1976d2; /* Blå färg för p-element inne i .box */
+	font-weight: bold;
+}
+
+/* ============================================
+   SEKTION 3: AVANCERADE SELEKTORER (PSEUDO-KLASSER)
+   ============================================ */
+
+/* Pseudo-klass :hover - Aktiveras när muspekaren är över elementet */
+/* Syntax: .klassnamn:hover */
+.hover-demo {
+	background-color: #e0e0e0;
+	padding: 15px;
+	border-radius: 5px;
+	transition: all 0.3s ease; /* Mjuk övergångseffekt */
+	cursor: pointer;
+}
+
+/* När muspekaren hålls över elementet med klassen "hover-demo" */
+.hover-demo:hover {
+	background-color: #81c784; /* Grön bakgrund vid hover */
+	transform: scale(1.05); /* Gör elementet lite större */
+	font-weight: bold;
+}
+
+/* Hover-effekt för länkar */
+.hover-link {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #2196f3;
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: all 0.3s ease;
+}
+
+.hover-link:hover {
+	background-color: #1976d2; /* Mörkare blå vid hover */
+	transform: translateY(-2px); /* Flyttar upp länken lite */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Pseudo-klass :first-child - Väljer första barnet */
+/* Syntax: .klassnamn li:first-child */
+.child-demo {
+	list-style-type: none;
+	padding: 0;
+}
+
+.child-demo li {
+	padding: 10px;
+	margin: 5px 0;
+	background-color: #f5f5f5;
+	border-left: 3px solid #ccc;
+}
+
+/* Stylar första listelementet i .child-demo */
+.child-demo li:first-child {
+	background-color: #c8e6c9; /* Ljusgrön bakgrund */
+	border-left-color: #4caf50;
+	font-weight: bold;
+}
+
+/* Pseudo-klass :last-child - Väljer sista barnet */
+/* Stylar sista listelementet i .child-demo */
+.child-demo li:last-child {
+	background-color: #bbdefb; /* Ljublå bakgrund */
+	border-left-color: #2196f3;
+	font-weight: bold;
+}
+
+/* Pseudo-klass :nth-child() - Väljer ett specifikt element baserat på position */
+/* Syntax: .klassnamn li:nth-child(2) väljer det andra elementet */
+.nth-demo {
+	list-style-type: none;
+	padding: 0;
+}
+
+.nth-demo li {
+	padding: 10px;
+	margin: 5px 0;
+	background-color: #f5f5f5;
+}
+
+/* Stylar det andra listelementet (index 2) */
+.nth-demo li:nth-child(2) {
+	background-color: #ffe082; /* Gul bakgrund */
+	font-weight: bold;
+	border-left: 4px solid #ffa000;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+	text-align: center;
+	margin-top: 40px;
+	padding: 20px;
+	background-color: #333;
+	color: white;
+	border-radius: 5px;
+}
+
+footer p {
+	color: white; /* Överskrider den blå färgen från p-selektorn */
+	margin: 0;
+}

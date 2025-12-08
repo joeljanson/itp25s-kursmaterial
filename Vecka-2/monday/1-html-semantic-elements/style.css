@@ -1,0 +1,88 @@
+/* Enkel CSS för att visa skillnader mellan semantiska HTML-element */
+
+/* HEADER: Grön bakgrund för sidhuvudet */
+header {
+	background-color: #90ee90;
+	padding: 20px;
+	border: 2px solid #006400;
+	margin-bottom: 10px;
+}
+
+/* NAV: Blå bakgrund för navigationsmenyn */
+nav {
+	background-color: #87ceeb;
+	padding: 15px;
+	border: 2px solid #0000cd;
+	margin-bottom: 10px;
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+nav li {
+	display: inline;
+	margin-right: 20px;
+}
+
+nav a {
+	text-decoration: none;
+	color: #0000cd;
+	font-weight: bold;
+}
+
+/* MAIN: Gul bakgrund för huvudinnehållet */
+main {
+	background-color: #ffd700;
+	padding: 20px;
+	border: 2px solid #ff8c00;
+	margin-bottom: 10px;
+}
+
+/* SECTION: Orange bakgrund för sektioner */
+section {
+	background-color: #ffa500;
+	padding: 15px;
+	border: 2px solid #ff4500;
+	margin: 10px 0;
+}
+
+/* ARTICLE: Röd bakgrund för artiklar */
+article {
+	background-color: #ffb6c1;
+	padding: 15px;
+	border: 2px solid #dc143c;
+	margin: 10px 0;
+}
+
+/* ASIDE: Lila bakgrund för sidopanelen */
+aside {
+	background-color: #dda0dd;
+	padding: 15px;
+	border: 2px solid #8b008b;
+	margin-bottom: 10px;
+}
+
+/* FOOTER: Grå bakgrund för sidfoten */
+footer {
+	background-color: #d3d3d3;
+	padding: 15px;
+	border: 2px solid #696969;
+	margin-top: 10px;
+}
+
+/* Grundläggande styling för hela sidan */
+body {
+	font-family: Arial, sans-serif;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+h1,
+h2,
+h3 {
+	margin-top: 0;
+}

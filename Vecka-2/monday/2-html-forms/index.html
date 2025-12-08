@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Kontaktformulär - Demo</title>
+   <!-- Länka till vår CSS-fil för styling -->
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+   <!-- FORM: Formulär-elementet är en container för alla formulärfält -->
+   <!-- action-attributet anger vart formuläret ska skickas (tomt nu eftersom vi inte har en server ännu) -->
+   <!-- method-attributet anger hur data ska skickas (GET eller POST) -->
+   <form action="" method="POST">
+      
+      <!-- Rubrik för formuläret -->
+      <h1>Kontakta oss</h1>
+      <p>Fyll i formuläret nedan för att skicka ett meddelande till oss.</p>
+
+      <!-- LABEL: Etikett för ett formulärfält -->
+      <!-- for-attributet kopplas ihop med input-elementets id-attribut -->
+      <!-- När användaren klickar på label:en, fokuseras automatiskt det kopplade input-fältet -->
+      <label for="namn">Namn:</label>
+      
+      <!-- INPUT: Ett inmatningsfält där användaren kan skriva text -->
+      <!-- type="text" betyder att det är ett vanligt textfält -->
+      <!-- id="namn" kopplar ihop detta fält med label:en ovan -->
+      <!-- name="namn" används när formuläret skickas (viktigt för server-side hantering) -->
+      <!-- required betyder att fältet måste fyllas i innan formuläret kan skickas -->
+      <!-- placeholder visar en exempeltext i fältet när det är tomt -->
+      <input type="text" id="namn" name="namn" required placeholder="Skriv ditt namn här">
+
+      <!-- Ett tomt rad-element för att skapa lite utrymme mellan fälten -->
+      <br><br>
+
+      <!-- Ytterligare ett label-element för e-postfältet -->
+      <label for="epost">E-post:</label>
+      
+      <!-- INPUT med type="email" -->
+      <!-- type="email" gör att webbläsaren automatiskt kontrollerar att det är en giltig e-postadress -->
+      <!-- Detta är en grundläggande validering, men vi kommer lära oss göra mer avancerad validering med JavaScript senare -->
+      <input type="email" id="epost" name="epost" required placeholder="exempel@email.com">
+
+      <br><br>
+
+      <!-- Label för meddelandefältet -->
+      <label for="meddelande">Meddelande:</label>
+      
+      <!-- TEXTAREA: Ett större textfält för längre texter -->
+      <!-- rows anger antal synliga rader (höjden) -->
+      <!-- cols anger antal synliga kolumner (bredden), men vi använder CSS för att styra bredden istället -->
+      <!-- placeholder visar exempeltext när textarea är tom -->
+      <textarea id="meddelande" name="meddelande" rows="6" required placeholder="Skriv ditt meddelande här..."></textarea>
+
+      <br><br>
+
+      <!-- BUTTON: En knapp för att skicka formuläret -->
+      <!-- type="submit" betyder att när knappen klickas skickas formuläret -->
+      <!-- value är texten som visas på knappen -->
+      <button type="submit">Skicka meddelande</button>
+
+      <!-- ALTERNATIV: Du kan också använda <input type="submit"> istället för <button> -->
+      <!-- <input type="submit" value="Skicka meddelande"> -->
+
+   </form>
+
+   <!-- OBS: Detta formulär kommer inte att fungera riktigt ännu eftersom vi inte har en server -->
+   <!-- När ni lär er JavaScript kommer ni kunna hantera formuläret på klientsidan -->
+   <!-- Om ni lär er backend-utveckling kommer ni kunna skicka data till en server -->
+
+</body>
+</html>

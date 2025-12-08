@@ -1,0 +1,130 @@
+/* Enkel CSS för kontaktformulär */
+
+/* BODY: Grundläggande styling för hela sidan */
+body {
+	font-family: Arial, sans-serif;
+	/* max-width begränsar sidans bredd så den inte blir för bred på stora skärmar */
+	max-width: 600px;
+	/* margin: 0 auto centrerar innehållet horisontellt */
+	margin: 0 auto;
+	/* padding ger lite utrymme från kanterna */
+	padding: 20px;
+	/* background-color ger sidan en ljusgrå bakgrund */
+	background-color: #f5f5f5;
+}
+
+/* FORM: Styling för själva formuläret */
+form {
+	/* background-color ger formuläret en vit bakgrund */
+	background-color: white;
+	/* padding ger utrymme inuti formuläret */
+	padding: 30px;
+	/* border-radius gör hörnen rundade */
+	border-radius: 8px;
+	/* box-shadow lägger till en skugga för att ge djup */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* H1: Styling för rubriken */
+h1 {
+	/* color sätter textfärgen */
+	color: #333;
+	/* margin-top: 0 tar bort standardmarginalen ovanför */
+	margin-top: 0;
+}
+
+/* LABEL: Styling för alla etiketter (labels) */
+label {
+	/* display: block gör att varje label tar en hel rad (block-element) */
+	display: block;
+	/* margin-bottom ger utrymme under label:en */
+	margin-bottom: 5px;
+	/* font-weight gör texten lite fetare */
+	font-weight: bold;
+	/* color sätter textfärgen */
+	color: #555;
+}
+
+/* INPUT: Styling för alla textfält (input) */
+input[type="text"],
+input[type="email"] {
+	/* width: 100% gör att fältet tar upp hela bredden av sin container */
+	width: 100%;
+	/* padding ger utrymme inuti fältet */
+	padding: 10px;
+	/* border ger fältet en ram */
+	border: 1px solid #ddd;
+	/* border-radius gör hörnen lite rundade */
+	border-radius: 4px;
+	/* font-size sätter textstorleken */
+	font-size: 16px;
+	/* box-sizing: border-box gör att padding och border ingår i width */
+	box-sizing: border-box;
+}
+
+/* TEXTAREA: Styling för meddelandefältet */
+textarea {
+	/* width: 100% gör att textarea tar upp hela bredden */
+	width: 100%;
+	/* padding ger utrymme inuti textarea */
+	padding: 10px;
+	/* border ger textarea en ram */
+	border: 1px solid #ddd;
+	/* border-radius gör hörnen lite rundade */
+	border-radius: 4px;
+	/* font-size sätter textstorleken */
+	font-size: 16px;
+	/* font-family sätter typsnittet */
+	font-family: Arial, sans-serif;
+	/* box-sizing: border-box gör att padding och border ingår i width */
+	box-sizing: border-box;
+	/* resize: vertical låter användaren ändra höjden men inte bredden */
+	resize: vertical;
+}
+
+/* FOCUS: När användaren klickar i ett fält (fokuserar det) */
+/* Detta gör det lättare att se vilket fält som är aktivt */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+	/* outline tar bort standardblå ramen */
+	outline: none;
+	/* border-color ändrar ramfärgen när fältet är fokuserat */
+	border-color: #4caf50;
+	/* box-shadow lägger till en grön skugga för att markera fokus */
+	box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* BUTTON: Styling för skicka-knappen */
+button {
+	/* background-color ger knappen en grön bakgrund */
+	background-color: #4caf50;
+	/* color sätter textfärgen till vit */
+	color: white;
+	/* padding ger utrymme inuti knappen */
+	padding: 12px 30px;
+	/* border tar bort standardramen */
+	border: none;
+	/* border-radius gör hörnen rundade */
+	border-radius: 4px;
+	/* font-size sätter textstorleken */
+	font-size: 16px;
+	/* cursor: pointer gör att muspekaren blir en hand när man håller över knappen */
+	cursor: pointer;
+	/* font-weight gör texten lite fetare */
+	font-weight: bold;
+}
+
+/* HOVER: När användaren håller muspekaren över knappen */
+button:hover {
+	/* background-color ändras till en mörkare grön */
+	background-color: #45a049;
+}
+
+/* ACTIVE: När användaren klickar på knappen */
+button:active {
+	/* background-color blir ännu mörkare när man klickar */
+	background-color: #3d8b40;
+	/* transform gör att knappen trycks ner lite visuellt */
+	transform: scale(0.98);
+}

@@ -1,0 +1,22 @@
+* {
+	font-family: Arial, sans-serif;
+	padding: 10px;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+h1 {
+	font-family: "Courier New", Courier, monospace;
+	display: none;
+}
+
+.orange-color {
+	background-color: orange;
+}
+#red-color {
+	background-color: rgb(237, 103, 103);
+}
+
+.contact-page button {
+	background-color: rgb(237, 103, 103);
+}

@@ -1,0 +1,22 @@
+.contact-form {
+	background-color: #f4f4f4;
+	border: 1px solid #ccc;
+	padding: 20px;
+	border-radius: 5px;
+	width: 40%;
+}
+.contact-form input {
+	display: block;
+	margin-bottom: 10px;
+	width: 100%;
+	padding: 8px;
+	box-sizing: border-box;
+}
+.contact-form button {
+	background-color: orange;
+	color: white;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+	width: 100%;
+}

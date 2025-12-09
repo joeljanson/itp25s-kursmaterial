@@ -16,80 +16,105 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer
 
 <!DOCTYPE html>
 <html lang="sv">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Semantiska HTML-element - Demo</title>
-   <!-- CSS-länken är utkommenterad för att visa att semantiska element ser likadana ut utan styling -->
-   <!-- Ta bort kommentarerna nedan för att aktivera CSS och se skillnader mellan elementen -->
-   <!-- <link rel="stylesheet" href="style.css"> -->
-</head>
-<body>
-  
-   <!-- HEADER: Representerar sidhuvudet, ofta innehåller logotyp och sidtitel -->
-   <header>
-      <h1>Min Webbsida</h1>
-      <p>Detta är sidhuvudet (header) - här placeras ofta logotyp och sidtitel, ibland även navigationsmenyn</p>
-   </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Semantiska HTML-element - Demo</title>
+		<!-- CSS-länken är utkommenterad för att visa att semantiska element ser likadana ut utan styling -->
+		<!-- Ta bort kommentarerna nedan för att aktivera CSS och se skillnader mellan elementen -->
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<!-- HEADER: Representerar sidhuvudet, ofta innehåller logotyp och sidtitel -->
+		<header>
+			<h1>Joels Webbsida</h1>
+			<p>
+				Detta är sidhuvudet (header) - här placeras ofta logotyp och sidtitel,
+				ibland även navigationsmenyn
+			</p>
+		</header>
 
-   <!-- NAV: Representerar navigationssektion, innehåller länkar till olika delar av webbplatsen -->
-   <nav>
-      <ul>
-         <li><a href="#hem">Hem</a></li>
-         <li><a href="#om">Om oss</a></li>
-         <li><a href="#kontakt">Kontakt</a></li>
-      </ul>
-      <p>Detta är navigationsmenyn (nav) - här placeras länkar till olika sidor</p>
-   </nav>
+		<!-- NAV: Representerar navigationssektion, innehåller länkar till olika delar av webbplatsen -->
+		<nav>
+			<ul>
+				<li><a href="#hem">Hem</a></li>
+				<li><a href="#om">Om oss</a></li>
+				<li><a href="#kontakt">Kontakt</a></li>
+			</ul>
+			<p>
+				Detta är navigationsmenyn (nav) - här placeras länkar till olika sidor
+			</p>
+		</nav>
 
-   <!-- MAIN: Representerar huvudinnehållet på sidan, ska bara finnas en per sida -->
-   <main>
-      <p>Detta är huvudinnehållet (main) - här placeras det viktigaste innehållet på sidan</p>
+		<!-- MAIN: Representerar huvudinnehållet på sidan, ska bara finnas en per sida -->
+		<main>
+			<p>
+				Detta är huvudinnehållet (main) - här placeras det viktigaste innehållet
+				på sidan
+			</p>
 
-      <!-- SECTION: Representerar en tematisk gruppering av innehåll -->
-      <section>
-         <h2>Välkommen</h2>
-         <p>Detta är en sektion (section) - används för att gruppera relaterat innehåll</p>
+			<!-- SECTION: Representerar en tematisk gruppering av innehåll -->
+			<section>
+				<h2>Välkommen</h2>
+				<p>
+					Detta är en sektion (section) - används för att gruppera relaterat
+					innehåll
+				</p>
 
-         <!-- ARTICLE: Representerar ett fristående innehållsblock som kan förstås oberoende -->
-         <article>
-            <h3>Artikel 1</h3>
-            <p>Detta är en artikel (article) - används för fristående innehåll som blogginlägg, nyhetsartiklar etc.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-         </article>
+				<!-- ARTICLE: Representerar ett fristående innehållsblock som kan förstås oberoende -->
+				<article>
+					<h3>Artikel 1</h3>
+					<p>
+						Detta är en artikel (article) - används för fristående innehåll som
+						blogginlägg, nyhetsartiklar etc.
+					</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</article>
 
-         <!-- ARTICLE: Ytterligare en artikel för att visa att flera artiklar kan finnas i en sektion -->
-         <article>
-            <h3>Artikel 2</h3>
-            <p>Detta är en till artikel (article) - flera artiklar kan finnas i samma sektion</p>
-            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-         </article>
-      </section>
+				<!-- ARTICLE: Ytterligare en artikel för att visa att flera artiklar kan finnas i en sektion -->
+				<article>
+					<h3>Artikel 2</h3>
+					<p>
+						Detta är en till artikel (article) - flera artiklar kan finnas i
+						samma sektion
+					</p>
+					<p>
+						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					</p>
+				</article>
+			</section>
 
-      <!-- SECTION: Ytterligare en sektion för att visa strukturen -->
-      <section>
-         <h2>Om oss</h2>
-         <p>Detta är en annan sektion (section) - varje sektion har sitt eget tema</p>
-         <p>Här kan vi ha information om företaget, teamet eller projektet.</p>
-      </section>
-   </main>
+			<!-- SECTION: Ytterligare en sektion för att visa strukturen -->
+			<section>
+				<h2>Om oss</h2>
+				<p>
+					Detta är en annan sektion (section) - varje sektion har sitt eget tema
+				</p>
+				<p>Här kan vi ha information om företaget, teamet eller projektet.</p>
+			</section>
+		</main>
 
-   <!-- ASIDE: Representerar innehåll som är relaterat till huvudinnehållet men kan ses som separat -->
-   <aside>
-      <h2>Senaste nytt</h2>
-      <p>Detta är en sidopanel (aside) - används för relaterat innehåll som sidopaneler, reklam, länkar etc.</p>
-      <ul>
-         <li>Nyhet 1</li>
-         <li>Nyhet 2</li>
-         <li>Nyhet 3</li>
-      </ul>
-   </aside>
+		<!-- ASIDE: Representerar innehåll som är relaterat till huvudinnehållet men kan ses som separat -->
+		<aside>
+			<h2>Senaste nytt</h2>
+			<p>
+				Detta är en sidopanel (aside) - används för relaterat innehåll som
+				sidopaneler, reklam, länkar etc.
+			</p>
+			<ul>
+				<li>Nyhet 1</li>
+				<li>Nyhet 2</li>
+				<li>Nyhet 3</li>
+			</ul>
+		</aside>
 
-   <!-- FOOTER: Representerar sidfoten, ofta innehåller copyright, kontaktinfo, länkar -->
-   <footer>
-      <p>Detta är sidfoten (footer) - här placeras ofta copyright, kontaktinformation och länkar</p>
-      <p>&copy; 2025 Joels enkla hemsida. Alla rättigheter förbehållna.</p>
-   </footer>
-
-</body>
+		<!-- FOOTER: Representerar sidfoten, ofta innehåller copyright, kontaktinfo, länkar -->
+		<footer>
+			<p>
+				Detta är sidfoten (footer) - här placeras ofta copyright,
+				kontaktinformation och länkar
+			</p>
+			<p>&copy; 2025 Joels enkla hemsida. Alla rättigheter förbehållna.</p>
+		</footer>
+	</body>
 </html>

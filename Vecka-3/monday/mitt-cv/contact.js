@@ -20,7 +20,17 @@ contactForm.addEventListener("submit", function (event) {
 	}
 
 	if (name.length < 2) {
-		alert("Namnet måste vara minst 2 tecken långt.");
+		const nameError = document.getElementById("name-error");
+		//<p class="error-message" id="name-error"></p>
+		nameError.textContent = "Namnet måste vara minst 2 tecken långt.";
+		//<p class="error-message" id="name-error">Namnet måste vara ....</p>
+		nameError.style.display = "block";
+		return;
+	}
+	if (email.length < 5 || !email.includes("@")) {
+		const emailError = document.getElementById("email-error");
+		emailError.textContent = "E-postadressen måste vara minst 5 tecken lång.";
+		emailError.style.display = "block";
 		return;
 	}
 

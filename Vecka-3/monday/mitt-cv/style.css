@@ -175,6 +175,12 @@ button:hover {
 	background-color: #555;
 }
 
+.error-message {
+	color: red;
+	font-size: 0.9rem;
+	display: none;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
 	.main-content {

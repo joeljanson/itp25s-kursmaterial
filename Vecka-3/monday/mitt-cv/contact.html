@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="sv">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Kontakt - Mitt CV</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<nav>
+					<div class="logo">Mitt CV</div>
+					<ul class="nav-links">
+						<li><a href="index.html">Hem</a></li>
+						<li><a href="about.html">Om Mig</a></li>
+						<li><a href="contact.html">Kontakt</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<div class="container main-content">
+			<main>
+				<section>
+					<h1>Kontakta Mig</h1>
+					<p>
+						Vill du komma i kontakt med mig? Fyll i formuläret nedan eller
+						skicka ett mail direkt.
+					</p>
+				</section>
+
+				<section>
+					<form id="contact-form" onsubmit="return false">
+						<label for="name">Namn</label>
+						<input
+							type="text"
+							id="name"
+							name="name"
+							required
+							placeholder="Ditt namn"
+						/>
+
+						<label for="email">E-post</label>
+						<input
+							type="email"
+							id="email"
+							name="email"
+							required
+							placeholder="din.epost@exempel.se"
+						/>
+
+						<label for="message">Meddelande</label>
+						<textarea
+							id="message"
+							name="message"
+							rows="5"
+							required
+							placeholder="Ditt meddelande här..."
+						></textarea>
+
+						<button type="submit">Skicka Meddelande</button>
+					</form>
+				</section>
+			</main>
+
+			<aside>
+				<h3>Kontaktuppgifter</h3>
+				<ul>
+					<li><strong>Email:</strong> hej@mittcv.se</li>
+					<li><strong>Telefon:</strong> 070-123 45 67</li>
+				</ul>
+				<br />
+				<h3>Följ mig</h3>
+				<ul>
+					<li><a href="#">Twitter</a></li>
+					<li><a href="#">Instagram</a></li>
+				</ul>
+			</aside>
+		</div>
+
+		<footer>
+			<div class="container">
+				<p>&copy; 2025 Mitt CV. Alla rättigheter förbehållna.</p>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -8,9 +8,63 @@ const projects = [
 		description:
 			"En interaktiv applikation för att hantera uppgifter och påminnelser.",
 	},
+	{
+		title: "Projekt A",
+		description: "En webbplats för att visa upp mina projekt och färdigheter.",
+	},
+	{
+		title: "Projekt B",
+		description:
+			"En interaktiv applikation för att hantera uppgifter och påminnelser.",
+	},
+	{
+		title: "Projekt A",
+		description: "En webbplats för att visa upp mina projekt och färdigheter.",
+	},
+	{
+		title: "Projekt B",
+		description:
+			"En interaktiv applikation för att hantera uppgifter och påminnelser.",
+	},
+	{
+		title: "Projekt A",
+		description: "En webbplats för att visa upp mina projekt och färdigheter.",
+	},
+	{
+		title: "Projekt B",
+		description:
+			"En interaktiv applikation för att hantera uppgifter och påminnelser.",
+	},
+	{
+		title: "Projekt A",
+		description: "En webbplats för att visa upp mina projekt och färdigheter.",
+	},
+	{
+		title: "Projekt B",
+		description:
+			"En interaktiv applikation för att hantera uppgifter och påminnelser.",
+	},
+	{
+		title: "Projekt A",
+		description: "En webbplats för att visa upp mina projekt och färdigheter.",
+	},
+	{
+		title: "Projekt B",
+		description:
+			"En interaktiv applikation för att hantera uppgifter och påminnelser.",
+	},
+	{
+		title: "Projekt A",
+		description: "En webbplats för att visa upp mina projekt och färdigheter.",
+	},
+	{
+		title: "Projekt B",
+		description:
+			"En interaktiv applikation för att hantera uppgifter och påminnelser.",
+	},
 ];
 
-function renderProjects() {
+function addProjectsToHTML() {
 	const projectsContainer = document.getElementById("projects-container");
 	if (!projectsContainer) {
 		console.error("No element with id 'projects-container' found.");
@@ -19,6 +73,7 @@ function renderProjects() {
 
 	projects.forEach((project) => {
 		const article = document.createElement("article");
+		article.classList.add("project-item");
 		const title = document.createElement("h3");
 		title.textContent = project.title;
 
@@ -30,3 +85,5 @@ function renderProjects() {
 		projectsContainer.appendChild(article);
 	});
 }
+
+document.addEventListener("DOMContentLoaded", addProjectsToHTML);

@@ -62,6 +62,7 @@ app.mount("#app");
 ```
 
 3. Byt ut den plats där eran gamla navigation låg till er nya.
+
 - Vue kommer automatiskt översätta "NavBar" till "nav-bar" (från PascalCase till kebab-case)
 
 ```html
@@ -75,7 +76,8 @@ app.mount("#app");
 							<li><a href="contact.html">Kontakt</a></li>
 						</ul>
 					</nav> -->
-		<nav-bar /> <!-- Detta är den nya raden -->
+		<nav-bar />
+		<!-- Detta är den nya raden -->
 	</div>
 </header>
 ```

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Mitt CV - Hem</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="script.js" defer></script>
+	<script src="projects.js" defer></script>
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<!-- <nav>
+				<div class="logo">Mitt CV</div>
+				<ul class="nav-links">
+					<li><a href="index.html">Hem</a></li>
+					<li><a href="about.html">Om Mig</a></li>
+					<li><a href="contact.html">Kontakt</a></li>
+				</ul>
+			</nav> -->
+			<VueComponent />
+		</div>
+	</header>
+
+	<div class="container main-content">
+		<main>
+			<section>
+				<h1>Välkommen till mitt CV</h1>
+				<p>
+					Hej! Jag är en passionerad utvecklare som älskar att bygga saker för
+					webben. Det här är min enkla CV-sida byggd med HTML, CSS och
+					JavaScript.
+				</p>
+				<p>
+					Här kan du läsa mer om mina erfarenheter, mina färdigheter och hur
+					du kan kontakta mig.
+				</p>
+			</section>
+
+			<!-- <section>
+				<h2>Senaste Projekt</h2>
+				<article>
+					<h3>Projekt A</h3>
+					<p>
+						En kort beskrivning av ett intressant projekt jag arbetat med
+						nyligen.
+					</p>
+				</article>
+				<br />
+				<article>
+					<h3>Projekt B</h3>
+					<p>Ett annat projekt som visar på min bredd inom webbutveckling.</p>
+				</article>
+			</section> -->
+			<section>
+				<h2>Senaste Projekt</h2>
+				<div id="projects-container">
+					<!-- Projekt kommer att laddas in här via JavaScript -->
+				</div>
+			</section>
+		</main>
+
+		<aside>
+			<h3>Snabba Fakta</h3>
+			<ul>
+				<li><strong>Plats:</strong> Stockholm, Sverige</li>
+				<li><strong>Status:</strong> Tillgänglig för uppdrag</li>
+				<li><strong>Erfarenhet:</strong> 5+ år</li>
+				<li><strong>Språk:</strong> Svenska, Engelska</li>
+			</ul>
+			<br />
+			<h3>Länkar</h3>
+			<ul>
+				<li><a href="#">LinkedIn</a></li>
+				<li><a href="#">GitHub</a></li>
+			</ul>
+		</aside>
+	</div>
+
+	<footer>
+		<div class="container">
+			<p>&copy; 2025 Mitt CV. Alla rättigheter förbehållna.</p>
+		</div>
+	</footer>
+</body>
+
+</html>

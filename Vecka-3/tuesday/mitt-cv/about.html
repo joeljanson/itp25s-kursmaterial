@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Om Mig - Mitt CV</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="script.js" defer></script>
+	<script src="contact.js" defer></script>
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<nav>
+				<div class="logo">Joel Janson Johansen</div>
+				<ul class="nav-links">
+					<li><a href="index.html">Hem</a></li>
+					<li><a href="about.html">Om Mig</a></li>
+					<li><a href="contact.html">Kontakt</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div class="container main-content">
+		<main>
+			<section>
+				<h1>Om Mig</h1>
+				<p>
+					Jag är en driven systemutvecklare med fokus på moderna webbtekniker.
+					Jag har erfarenhet av att arbeta i både små och stora team och
+					brinner för att skriva ren och underhållbar kod.
+				</p>
+			</section>
+
+			<section>
+				<h2>Arbetslivserfarenhet</h2>
+
+				<div class="job">
+					<h3>Senior Utvecklare - Techbolaget AB</h3>
+					<p class="date">2022 - Nuvarande</p>
+					<p>
+						Ansvarig för frontend-arkitektur och mentorskap för juniora
+						utvecklare.
+					</p>
+				</div>
+				<br />
+				<div class="job">
+					<h3>Webbutvecklare - Webbyrån</h3>
+					<p class="date">2019 - 2022</p>
+					<p>
+						Byggde skräddarsydda webbplatser åt kunder inom olika branscher.
+						Fokus på WordPress och React.
+					</p>
+				</div>
+			</section>
+
+			<section>
+				<h2>Utbildning</h2>
+				<div class="education">
+					<h3>Kandidatexamen i Datateknik</h3>
+					<p>Universitetet, 2016 - 2019</p>
+				</div>
+			</section>
+		</main>
+
+		<aside>
+			<h3>Färdigheter</h3>
+			<ul>
+				<li>HTML5 & CSS3</li>
+				<li>JavaScript (ES6+)</li>
+				<li>React & Vue</li>
+				<li>Node.js</li>
+				<li>Git & GitHub</li>
+			</ul>
+		</aside>
+	</div>
+
+	<form onsubmit="return false" id="contact-form">
+		<label for="name">Namn:</label>
+		<input type="text" id="name" name="name" required placeholder="Skriv ditt namn här">
+
+		<label for="email">E-post</label>
+		<input type="email" id="email" name="email" placeholder="din.epost@exempel.se" />
+
+		<label for="message">Meddelande</label>
+		<textarea id="message" name="message" rows="5" required placeholder="Ditt meddelande här..."></textarea>
+
+		<button type="submit">Skicka Meddelande</button>
+	</form>
+
+	<footer>
+		<div class="container">
+			<p>&copy; 2025 Mitt CV. Alla rättigheter förbehållna.</p>
+		</div>
+	</footer>
+
+</body>
+
+</html>
